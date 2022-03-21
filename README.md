@@ -1,1 +1,4 @@
 # holberton-headphones
+
+### Learning Objectives
+-
