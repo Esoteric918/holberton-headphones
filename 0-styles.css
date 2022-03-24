@@ -239,7 +239,16 @@ html {
     filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
   }
 
-
+ /* Helpers
+	  ============================= */
+  .visually-hidden:not(:focus):not(:active) {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+  }
 
 /** LAYOUT **/
 /* header */
@@ -378,7 +387,7 @@ nav li {
     top: 0;
   }
 
-  @media screen and(max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .navbar-menu {
       display: none;
     }
@@ -390,7 +399,7 @@ nav li {
     }
   }
 
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 375px), (max-width: 768px) {
     .navbar-menu {
       float: right;
     }
@@ -485,3 +494,12 @@ nav li {
     margin: 40px 0;
   }
 
+  @media screen and (max-width: 768px) {
+      .body .inner {
+        width: 637px;
+        height: 313px;
+        left: 66px;
+        top: 372px;
+
+      }
+  }
