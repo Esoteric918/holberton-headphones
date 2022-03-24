@@ -206,6 +206,9 @@ html {
     --font-family-logo: "Spin-Cycle-OT", sans-serif;
     --icon-font-family: 'holberton_school-icon';
     --navbar-font-size: 12px;
+
+    /* icon */
+    --icon-font-size: 100px
 }
 
 /* Base
@@ -427,7 +430,6 @@ nav li {
 
  .mainPage{
    font-family: var(--font-family-regular);
-   color: var(--color-light)
 }
 /* Sections */
 
@@ -442,8 +444,10 @@ nav li {
     color: var(--color-light);
 
 }
+
 .main-page {
     font-family: var(--font-family-regular);
+    color: var(--color-light);
   }
 
   .header {
@@ -503,3 +507,108 @@ nav li {
 
       }
   }
+
+  /* What we do */
+
+  .section-container-what h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    /* width: 637px;
+    height: 184px;
+    left: 382px;
+    top: 903px; */
+
+  }
+
+  .section-what p{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-black);
+    height: 104px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 104px/2 + 40px);
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0  444px;
+}
+
+.what-icon  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    flex-direction: row;
+    width: 1002px;
+    height: 193px;
+    left: 207px;
+    top: 1194px;
+
+}
+
+.icon {
+    font-family: var(--icon-font-family);
+    font-size: var(--icon-font-size);
+    color: var(--color-primary);
+
+}
+
+.icon-list {
+    margin: 0 25px 0 25px;
+    display: inline-flex;
+    justify-content: center;
+    /* width: 1002px;
+    height: 193px;
+    top: 1194px; */
+    padding: 0 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+.what-icon {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 355px;
+}
+
+.icon-list:first-child,
+.icon-list:last-child {
+    margin: 0;
+}
+
+.section-what li {
+    list-style-type: none;
+}
+
+.items .icon-text p {
+    text-align: center;
+    justify-content: space-between;
+}
+
+.what-icon-1:before {
+    content: "\e90e";
+}
+
+.what-icon-2:before {
+    content: "\e910";
+}
+
+.what-icon-3:before {
+    content: "\e90d";
+}
+
+.what-icon-4:before {
+    content: "\e909";
+}
