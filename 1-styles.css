@@ -243,17 +243,6 @@ html {
 	filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
   }
 
- /* Helpers
-	  ============================= */
-  .visually-hidden:not(:focus):not(:active) {
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap;
-  }
-
 /** LAYOUT **/
 /* header */
 header {
@@ -290,10 +279,6 @@ header {
 	display: inline-flex;
   }
 
-.nav-item:first-child,
-.nav-item:last-child {
-	margin: 0;
-}
 
 nav li {
 	list-style-type: none;
@@ -462,7 +447,7 @@ nav li {
   }
 
   .section-what p{
-	display: block;
+	display: flex;
 	justify-content: center;
 	text-align: center;
 	color: var(--color-black);
@@ -470,7 +455,7 @@ nav li {
 	left: 0%;
 	right: 0%;
 	top: calc(50% - 104px/2 + 40px);
-	font-family: 'Source Sans Pro';
+	font-family: var(--font-family-regular);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -480,81 +465,63 @@ nav li {
 }
 
 
-.what-icon  {
+ .what-icons  {
 	display: flex;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
 	font-size: 18px;
 	flex-direction: row;
-	width: 1002px;
-	height: 193px;
-	left: 207px;
-	top: 1194px;
-
-}
-
-.icon {
-	font-family: var(--icon-font-family);
-	font-size: var(--icon-font-size);
-	color: var(--color-primary);
-
+    justify-content: space-evenly;
 }
 
 .icon-list {
-	margin: 0 25px 0 25px;
 	display: inline-flex;
 	justify-content: center;
-	padding: 0 200px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+    /* padding-inline-start: 0;
+    margin-top: 80px;*/
 }
 
 .items {
+    margin: 0 30px 0 30px;
 	list-style-type: none;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	text-align: center;
-}
-.what-icon {
-	display: inline-flex;
-	justify-content: space-evenly;
-	width: 355px;
-}
-
-.icon-list:first-child,
-.icon-list:last-child {
-	margin: 0;
-}
-
-.section-what li {
-	list-style-type: none;
-}
-
-.icon-text p {
-	text-align: center;
-	padding: 10px;
+    width: 207px;
 }
 
 .what-icon-1:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e90e";
 }
 
 .what-icon-2:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e910";
 }
 
 .what-icon-3:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e90d";
 }
 
 .what-icon-4:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e909";
 }
 
 
   /* Media Q's */
 
-  @media screen and (min-width: 376px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
 	.navbar-menu {
 	  display: none;
 	}
@@ -568,7 +535,7 @@ nav li {
 
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
 	.navbar-menu {
 	  float: right;
 	}
