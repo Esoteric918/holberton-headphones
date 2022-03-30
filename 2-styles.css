@@ -243,17 +243,6 @@ html {
 	filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
   }
 
- /* Helpers
-	  ============================= */
-  .visually-hidden:not(:focus):not(:active) {
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap;
-  }
-
 /** LAYOUT **/
 /* header */
 header {
@@ -262,34 +251,27 @@ header {
   }
 
   .header .header-container {
-	padding: 0 2rem 0 2rem;
-	display: block;
+	/* padding: 0 13% 0 13%; */
+	display: flex;
 	width: 100%;
 	max-width: 1000px;
 	margin: 35px auto;
 	height: 32px;
+    justify-content: space-between;
+    align-items: center;
   }
 
 .header-logo {
 	display: inline-flex;
-
-	width: 100%;
-	left: 0;
+    background: transparent url("images/logo_headphones.png") no-repeat left top;
+    background-size: contain;
+    height: 32px;
+    width: 161px;
 }
-
-.header-logo a {
-	display: block;
-	width: 161px;
-	height: 35px;
-	background: transparent url("images/logo_headphones.png") no-repeat left top;
-	background-size: 161px 32px;
-	text-indent: -9999px;
-}
-/* header - nav */
 
 .header-container .navbar-menu {
     text-align: right;
-    padding-top: -50px;
+    /* padding-top: -50px; */
 }
 
 .nav-item {
@@ -297,10 +279,6 @@ header {
 	display: inline-flex;
   }
 
-.nav-item:first-child,
-.nav-item:last-child {
-	margin: 0;
-}
 
 nav li {
 	list-style-type: none;
@@ -396,15 +374,13 @@ nav li {
 
  .mainPage{
    font-family: var(--font-family-regular);
-
 }
 /* Sections */
 
 .section-hero {
 	width: 100%;
-	height: 95vh;
+	height: 800px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	background: #d8d8d8 url("images/headphones_hero_1.jpg") no-repeat top center;
 	background-size: cover;
@@ -436,11 +412,7 @@ nav li {
 	width: 100%;
 	width: 637px;
 	height: 313px;
-    padding-top: 65px;
-  }
-
-  .container {
-	  padding-top: 300px;
+    padding-top: 372px;
   }
 
   .section-hero .body .inner {
@@ -475,7 +447,7 @@ nav li {
   }
 
   .section-what p{
-	display: block;
+	display: flex;
 	justify-content: center;
 	text-align: center;
 	color: var(--color-black);
@@ -483,7 +455,7 @@ nav li {
 	left: 0%;
 	right: 0%;
 	top: calc(50% - 104px/2 + 40px);
-	font-family: 'Source Sans Pro';
+	font-family: var(--font-family-regular);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -491,83 +463,167 @@ nav li {
 	margin-left: 25%;
     margin-right: 25%;
 }
-}
 
-.what-icon  {
+
+ .what-icons  {
 	display: flex;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
 	font-size: 18px;
 	flex-direction: row;
-	width: 1002px;
-	height: 193px;
-	left: 207px;
-	top: 1194px;
-
-}
-
-.icon {
-	font-family: var(--icon-font-family);
-	font-size: var(--icon-font-size);
-	color: var(--color-primary);
-
+    justify-content: space-evenly;
 }
 
 .icon-list {
-	margin: 0 25px 0 25px;
 	display: inline-flex;
 	justify-content: center;
-	padding: 0 200px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+    /* padding-inline-start: 0;
+    margin-top: 80px;*/
 }
 
 .items {
+    margin: 0 30px 0 30px;
 	list-style-type: none;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	text-align: center;
-}
-.what-icon {
-	display: inline-flex;
-	justify-content: space-evenly;
-	width: 355px;
-}
-
-.icon-list:first-child,
-.icon-list:last-child {
-	margin: 0;
-}
-
-.section-what li {
-	list-style-type: none;
-}
-
-.icon-text p {
-	text-align: center;
-	padding: 10px;
+    width: 207px;
 }
 
 .what-icon-1:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e90e";
 }
 
 .what-icon-2:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e910";
 }
 
 .what-icon-3:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e90d";
 }
 
 .what-icon-4:before {
+    font-family: var(--icon-font-family);
+	font-size: var(--icon-font-size);
+	color: var(--color-primary);
 	content: "\e909";
+}
+
+/* Our Results Section */
+
+.dark {
+    width: 100%;
+    height: 650px;
+    background: #d8d8d8 url("images/headphones_hero_2.jpg");
+    background-size: cover;
+    font-family: var(--font-family-regular);
+     color: var(--color-light);
+}
+.section-results h2 {
+    display: flex;
+	justify-content: center;
+	padding-top: 131px;
+    font-size: 32px;
+}
+
+.section-results p{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-top: 5%;
+}
+.pentagon {
+    background: url("images/pentagone.png")no-repeat;
+    height: 190px;
+    width: 190px;
+    background-size: contain;
+
+}
+.res-text {
+    padding-top: 30px;
+}
+.res-text h3 {
+    text-align: center;
+    font-size: 42px;
+    padding-top: 10px;
+    margin: 0 0 0 0;
+}
+
+.res-text p {
+    text-align: center;
+
+}
+
+/* From - Section */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.form-body {
+    justify-content: center;
+    display: flex;
+}
+.form-help::before {
+    max-height: 0px;
+}
+
+.form-group .input::after  ~ .form-help {
+    max-height: 15px;
+
+}
+.form-group {
+    width: 335px;
+    justify-content: center;
+}
+
+.form-group input {
+    width: 100%;
+    margin-bottom: 35px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 2.5em;
+
+    border: none;
+    border-bottom: solid;
+    border-width: thin;
+}
+
+.form-group input:focus-visible {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--txt-on-white);
+    opacity: 1;
 }
 
 
   /* Media Q's */
 
-  @media screen and (min-width: 376px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
 	.navbar-menu {
 	  display: none;
 	}
@@ -581,7 +637,7 @@ nav li {
 
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
 	.navbar-menu {
 	  float: right;
 	}
@@ -612,60 +668,3 @@ nav li {
     }
 }
 
-/* Result-Section */
-
-.dark {
-    width: 100%;
-	height: 95vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #d8d8d8 url("images/headphones_hero_2.jpg") no-repeat top center;
-	background-size: cover;
-	color: var(--color-light);
-}
-
-.section-results h2 {
-    text-align: center;
-    margin: 0 25px 60px 0;
-}
-.section-results .tagline {
-    text-align: center;
-    margin-left: 27%;
-    margin-right: 27%;
-    margin-bottom: 60px;
-}
-
-#our-results .card-ourresults {
-    background: transparent url("images/pentagone.png") no-repeat center center;
-    min-height: 190px;
-    min-width: 190px;
-    background-size: contain;
-    justify-content: space-evenly;
-  }
-
-  .card-ourresults {
-      padding-top: 40px;
-  }
-.results-elements .pentagon {
-    display: flex;
-    justify-content: center;
-
-}
-
-.pentagon {
-   height: 1px;
-}
-
-.res-text h3 {
-    font-size: 35px;
-}
-
-.card-ourresults:first-child,
-.card-ourresults:last-child {
-    margin: 10px;
-}
-.res-text{
-    list-style-type: none;
-    text-align: center;
-}
