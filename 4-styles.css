@@ -363,7 +363,7 @@ nav li {
     font-size: 16px;
     line-height: 26px;
 }
-ul {
+.list-results {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -371,7 +371,7 @@ ul {
     padding-top: 5%;
 }
 .pentagon {
-    background: url("images/pentagone.png")no-repeat;
+    background: url("images/pentagone.png") no-repeat;
     height: 190px;
     width: 190px;
     background-size: contain;
@@ -503,8 +503,7 @@ p {
 	.navbar-menu .nav .nav-item {
 	  text-align: center;
 	}
-  }
-
+}
 
 
 @media screen and (max-width: 480px) {
